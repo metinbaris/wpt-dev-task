@@ -29,6 +29,7 @@ class RefreshDataset {
         descriptionCell.textContent = dataset.description;
 
         const colorCodeCell = document.createElement('td');
+        colorCodeCell.style.color = dataset.colorCode;
         colorCodeCell.textContent = dataset.colorCode;
 
         row.appendChild(taskCell);
@@ -56,7 +57,6 @@ class RefreshDataset {
     }
 
     startAutoRefresh() {
-        this.refreshDataset();
         setInterval(() => this.refreshDataset(), this.intervalInMs);
     }
 }
