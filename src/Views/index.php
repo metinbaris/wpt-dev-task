@@ -11,6 +11,7 @@
 <body>
     <main class="container">
         <h1>Dataset Information</h1>
+        <input id="search" type="search" placeholder="Search" aria-label="Search" autocomplete="off"/>
         <table>
             <thead>
                 <tr>
@@ -36,5 +37,6 @@
         </table>
     </main>
 </body>
-<script src="/refresh-dataset.js"></script>
+<script src="/js/search-dataset.js"></script>
+<script src="/js/refresh-dataset.js"></script>
 </html>

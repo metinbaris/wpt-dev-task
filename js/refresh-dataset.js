@@ -50,7 +50,8 @@ class RefreshDataset {
             }
 
             const data = await response.json();
-            this.updateDataset(data);
+            await this.updateDataset(data);
+            searchDataset.setSearchData();
         } catch (error) {
             console.error('Failed to refresh dataset:', error);
         }
