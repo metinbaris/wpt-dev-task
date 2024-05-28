@@ -1,0 +1,22 @@
+{
+    "name": "metinbaris/wpt-dev-task",
+    "description": "New developer application task",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "predis/predis": "^2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Metinbaris\\Vero\\": "src/"
+        },
+        "psr-4-dev": {
+            "Tests\\": "tests/"
+        }
+    }
+}
