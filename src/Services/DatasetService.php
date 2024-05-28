@@ -63,10 +63,10 @@ class DatasetService
         $this->cache->set($accessTokenCacheKey, $accessTokenResponse->oauth, $accessTokenResponse->oauth->expires_in);
     }
 
-    public function getDataset()
+    public function getDataset($cacheCheck = true)
     {
         $dataset = $this->cache->get('baubuddy_dataset_' . self::cacheValue());
-        if ($dataset !== null) {
+        if ($dataset !== null && $cacheCheck === true) {
             return $dataset;
         }
 

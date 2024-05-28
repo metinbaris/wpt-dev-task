@@ -20,7 +20,7 @@
                     <th>ColorCode</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="dataset">
                 <?php
                 foreach ($dataset as $data) {
                     echo
@@ -36,5 +36,5 @@
         </table>
     </main>
 </body>
-
+<script src="/refresh-dataset.js"></script>
 </html>

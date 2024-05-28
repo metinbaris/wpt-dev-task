@@ -16,4 +16,12 @@ class DatasetController extends Controller
 
         $this->view('index', ['dataset' => $dataset]);
     }
+
+    public function refresh()
+    {
+        $dataset = $this->datasetService->getDataset(false);
+
+        echo json_encode($dataset);
+        exit;
+    }
 }

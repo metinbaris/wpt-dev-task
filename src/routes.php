@@ -20,7 +20,11 @@ if ($uri === "/") {
     $datasetService = new DatasetService($cache, $guzzle);
     $datasetController = new DatasetController($datasetService);
 
-    $datasetController->index();
+    if (isset($_SERVER['HTTP_REFRESHDATASET'])) {
+        $datasetController->refresh();
+    } else {
+        $datasetController->index();
+    }
 } else {
     // Route not found
     http_response_code(404);
