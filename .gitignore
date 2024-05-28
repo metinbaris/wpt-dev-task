@@ -1,0 +1,6 @@
+/vendor
+error.log
+.DS_Store
+.vscode
+.phpunit.result.cache
+.env
